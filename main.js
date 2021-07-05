@@ -13,11 +13,7 @@ DateYYYYMM
 OriginPop 
 DestinationPop
 */
-data = {
-    const data = await FileAttachment("flight_edges.tsv").tsv({typed: true});
-    return 
-    });
-}
 
+d3.tsv("https://media.githubusercontent.com/media/CornelieFalcon/DataViz/main/flight_edges.tsv?token=AQ2P4OK5ZK4FCJQFHJ5GQILA4LUAS"), function (data){};
 
 
