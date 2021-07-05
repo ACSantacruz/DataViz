@@ -13,20 +13,25 @@ DateYYYYMM
 OriginPop 
 DestinationPop
 */
-function parseFile() {
-    const data = d3.tsvParse(await FileAttachment("flight_edges.tsv").text(), d =>({
-        ORIG: +d["ORIG"],
-        DEST: +d["DEST"],
-        Origin: +d["Origin"],
-        Destination: +d["Destination"],
-        Passengers: +d["Passengers"],
-        SeatsAvailable: +d["SeatsAvailable"],
-        FlightsBTWN: +d["FlightsBTWN"],
-        DistanceMile: +d["DistanceMile"],	
-        DateYYYYMM: +d["DateYYYYMM"],
-        OriginPop: +d["OriginPop"],
-        DestinationPop: +d["DestinationPop"]
-    }));
-        
+
+/*Visualization Ideas:
+Sankey https://observablehq.com/@d3/sankey-diagram
+*/
+
+/*
+data = {
+    const data = d3.tsvParse(await FileAttachment("flight_edges.tsv").text();
+    const columns = data.columns.slice(1);
+    return {
+        y: "Passengers"
+        //trying stuff from https://observablehq.com/@d3/multi-line-chart
+    }
 }
-console.log(data);
+
+
+*/
+var dataUrl = "https://media.githubusercontent.com/media/CornelieFalcon/DataViz/main/flight_edges.tsv";
+
+d3.tsvParse(dataUrl, function(d) {
+
+});
