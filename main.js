@@ -32,6 +32,9 @@ data = {
 */
 var dataUrl = "https://media.githubusercontent.com/media/CornelieFalcon/DataViz/main/flight_edges.tsv";
 
-d3.tsvParse(dataUrl, function(d) {
-
-});
+data = {
+    const data = d3.tsvParse(dataUrl.text());
+    const names = Array.from(d3.group(data, d => +d.ORIG).keys()).sort(d3.ascending);
+    return {
+        names: names.map(d => new )
+    }
